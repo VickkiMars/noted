@@ -1,0 +1,5 @@
+1. Work on RL for 1 minutes
+2. Read TLOHN for 1 minutes
+3. Visit tradingview and explore the markets for 2 minutes
+4. Learn Chinese for 2 minutes
+break=2
