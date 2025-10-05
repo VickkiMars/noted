@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "title": "Break",
+    "message": "2 Minutes Break",
+    "start_time": "2025-10-05T18:02:21.763163",
+    "expected_termination_time": "2025-10-05T18:04:17.763163",
+    "notified_start": true
+  },
+  {
+    "message": "Read TLOHN",
+    "start_time": "2025-10-05T18:04:21.763163",
+    "expected_termination_time": "2025-10-05T18:05:21.763163",
+    "notified_start": false
+  },
+  {
+    "title": "Break",
+    "message": "2 Minutes Break",
+    "start_time": "2025-10-05T18:05:25.763163",
+    "expected_termination_time": "2025-10-05T18:07:21.763163"
+  },
+  {
+    "message": "Visit tradingview and explore the markets",
+    "start_time": "2025-10-05T18:07:25.763163",
+    "expected_termination_time": "2025-10-05T18:09:25.763163",
+    "notified_start": false
+  },
+  {
+    "title": "Break",
+    "message": "2 Minutes Break",
+    "start_time": "2025-10-05T18:09:29.763163",
+    "expected_termination_time": "2025-10-05T18:11:25.763163"
+  },
+  {
+    "message": "Learn Chinese",
+    "start_time": "2025-10-05T18:11:29.763163",
+    "expected_termination_time": "2025-10-05T18:13:29.763163",
+    "notified_start": false
+  },
+  {
+    "title": "Break",
+    "message": "2 Minutes Break",
+    "start_time": "2025-10-05T18:13:33.763163",
+    "expected_termination_time": "2025-10-05T18:15:29.763163"
+  }
+]

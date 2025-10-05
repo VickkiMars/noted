@@ -8,7 +8,7 @@ import platform
 from main import notify
 
 TASKS_FILE = Path("tasks.json")
-DEFAULT_SOUND = "/home/kami/Desktop/codebase/noted/assets/cheerful-527.wav"
+DEFAULT_SOUND = "assets/cheerful-527.wav"
 
 def load_tasks():
     if TASKS_FILE.exists():
@@ -36,9 +36,21 @@ def main():
             end_time = start_time + timedelta(minutes=duration)
             expected_termination_time = datetime.fromisoformat(task.get("expected_termination_time"))
 
+            # Send "Task Started" notification if it's time and not already notified
+            if start_time <= now < end_time and not task.get("notified_start"):
+                if task.get("title"):
+                    notify(task["title"], task["message"])
+                else:
+                    notify("Task Started", task["message"])
+                task["notified_start"] = True
+                changed = True
+
             # Send "Task Completed" notification if duration is up, but only once
             if end_time <= now < expected_termination_time and not task.get("notified_completed"):
-                notify("Task Completed", f"{task['message']} - Time's up!")
+                if task.get("title"):
+                    notify(task["title"], "Break is over")
+                else:
+                    notify("Task Completed", f"{task['message']} - Time's up!")
                 task["notified_completed"] = True
                 changed = True
 
